@@ -15,6 +15,10 @@ job("${GITHUB_USER}.roadshow.generated.build") {
         gradle('clean war jenkinstest jacoco')
       	shell("echo 'Hello, world!!'")
     }
+    artifactory {
+        "http://artifactory-e68379e8-1.buep.cont.tutum.io:49153/artifactory"
+        repository {"MCDwJCl-continuous"}
+    }
   	publishers {
       	jacocoCodeCoverage()
       	archiveJunit('build/test-results/*.xml')
