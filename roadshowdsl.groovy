@@ -20,6 +20,7 @@ job("${GITHUB_USER}.roadshow.generated.build") {
       	archiveJunit('build/test-results/*.xml')
       	warnings(['Java Compiler (javac)'])
     	downstream("${GITHUB_USER}.roadshow.generated.staticanalysis", 'SUCCESS')
+    	archiveArtifacts('build/RoadShow-*.*.*-*.war')
     }
 }
 
