@@ -17,7 +17,6 @@ job("${GITHUB_USER}.roadshow.generated.build") {
     }
     artifactory {
         contextUrl("http://artifactory-e68379e8-1.buep.cont.tutum.io:49153/artifactory")
-        clientConfig.setIncludeEnvVars(true)
     }
   	publishers {
       	jacocoCodeCoverage()
